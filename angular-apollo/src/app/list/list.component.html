@@ -1,0 +1,15 @@
+<!--- Loop through the array we declared in the other class need async -->
+<div>
+  <input #name/>
+  <button (click)="addHero(name.value)">Add Hero</button>
+
+<ul class="heroes">
+  <h4>My Heroes</h4>
+  <li *ngFor="let hero of heroes"  [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+      {{hero.name}} 
+      <button class="delete" title="delete hero" (click)="deleteHero(hero.id)">X</button>
+  </li>
+</ul>
+
+<app-hero-details [hero]="selectedHero"></app-hero-details>
+</div>
