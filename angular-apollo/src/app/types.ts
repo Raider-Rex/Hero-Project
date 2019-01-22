@@ -1,6 +1,6 @@
 /*
   Hero Project - FullStack Example
-  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Niko, House
+  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Nico Cai, House Liu
 */
 
 //Creating new Types that match the data being pulled from the database

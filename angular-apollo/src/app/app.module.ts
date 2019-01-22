@@ -1,6 +1,6 @@
 /*
   Hero Project - FullStack Example
-  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Niko, House
+  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Nico Cai, House Liu
 */
 
 import { BrowserModule } from '@angular/platform-browser';
