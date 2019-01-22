@@ -71,6 +71,7 @@ const Mutation = new GraphQLObjectType({
             args:{
                 id: {type: GraphQLString}
             },
+            //Async - creates a promise that is sent and allows the code to continue executing normally (may take a long time if you have to wait for it)
             async resolve(parent, args){
                 await Hero.findById(args.id).remove().exec();
             }
