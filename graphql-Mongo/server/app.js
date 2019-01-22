@@ -13,8 +13,10 @@ const app = express();
 // Creates permission to let the localhost:4200 have access to the resources of the server.
 app.options('localhost:4200', cors());
 // Uses mongoose as the intermediary between GraphQL and MongoDb.
-// Creating a connection to the MongoDB using the URL.
-mongoose.connect('mongodb://admin1:password01@ds157574.mlab.com:57574/hero');
+// Creating a connection the the MongoDB using the URL.
+// The "{useNewUrlParser: true}" parameter is included because the current url string parser is depreciated,
+// the server will still run without this, but that message will display everytime you do "node app.js".
+mongoose.connect('mongodb://admin1:password01@ds157574.mlab.com:57574/hero', {useNewUrlParser: true});
 mongoose.connection.once('open', () => {
     console.log('connected to database');
 })
