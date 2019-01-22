@@ -1,3 +1,4 @@
+<!-- Will only show this component if the hero property is set-->
 <div *ngIf="hero">
 
     <h2>{{hero.name | uppercase}} Details</h2>
@@ -5,8 +6,10 @@
     <br>
     <div>
       <label><b>Name: </b>
+        <!--2 way binds the hero name-->
         <input [(ngModel)]="hero.name" placeholder="name"/>
       </label>
+      <!--Calls the updateHero method and passes in the current hero id and name-->
       <button (click)="updateHero(hero.id, hero.name)">Save Name</button>
     </div>
   
