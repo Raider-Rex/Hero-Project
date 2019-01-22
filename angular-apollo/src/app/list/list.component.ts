@@ -1,6 +1,6 @@
 /*
   Hero Project - FullStack Example
-  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Niko, House
+  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Nico, House Liu
 */
 
 import { Component, OnInit } from '@angular/core';
