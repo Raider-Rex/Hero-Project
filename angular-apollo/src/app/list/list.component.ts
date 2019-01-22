@@ -1,6 +1,6 @@
 /*
   Hero Project - FullStack Example
-  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, John Tran, Niko, House
+  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, Niko, House
 */
 
 import { Component, OnInit } from '@angular/core';
@@ -60,6 +60,7 @@ export class ListComponent implements OnInit {
 
 //This Query Adds a new hero to the database
 addHero(name :string){
+    console.log(name);
     this.apollo.mutate({
       //The mutation property takes the mutation that you want to perform 
       //This mutation accepts a variable of type String! called name ($ denotes its a variable)
