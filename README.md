@@ -1,10 +1,6 @@
 Hero Project - FullStack Example using Angular 7, Apollo, GraphQL, and MongoDB
 
-<<<<<<< Updated upstream
 Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, John Tran, Niko and House
-=======
-Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, John Tran, Niko
->>>>>>> Stashed changes
 
 This project demonstates basic CRUD functionality between Angular and a database, 
 it uses Apollo/GraphQL to execute queries and mutations. This allows you access to the heroes collection 
