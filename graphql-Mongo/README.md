@@ -1,4 +1,3 @@
-# graphql-playlist
-All course files for the GraphQL tutorial playlist on The Net Ninja YouTube channel.
+Hero Project - FullStack Example using Angular 7, Apollo, GraphQL, and MongoDB
 
-Node modules are not included in the course files. After download, run npm install to install the modules (client and server folders)
+Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, John Tran, Niko
