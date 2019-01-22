@@ -1,3 +1,8 @@
+/*
+  Hero Project - FullStack Example
+  Project Team - Jovin Toews, Alexander Rennie, Tristan Smith, John Tran, Niko 
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,10 +34,13 @@ import { FormsModule } from "@angular/forms";
     FormsModule
   ],
   providers: [{
+    // Create an Apollo connection
     provide: APOLLO_OPTIONS,
     useFactory(httpLink: HttpLink) {
       return {
+        //Creates a cache to temporarily store data
         cache: new InMemoryCache(),
+        //Initializes the Link and sets the URI = to the address of our backend server
         link: httpLink.create({
           uri: "http://localhost:4000/graphql"
         })
