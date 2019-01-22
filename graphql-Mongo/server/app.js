@@ -10,10 +10,10 @@ const cors = require('cors');
 
 // The app object is instantiated on creation of the Express server.
 const app = express();
-// Creates permission to let the localhost:4200 have access the resources of the server.
+// Creates permission to let the localhost:4200 have access to the resources of the server.
 app.options('localhost:4200', cors());
 // Uses mongoose as the intermediary between GraphQL and MongoDb.
-// Creating a connection the the MongoDB using the URL.
+// Creating a connection to the MongoDB using the URL.
 mongoose.connect('mongodb://admin1:password01@ds157574.mlab.com:57574/hero');
 mongoose.connection.once('open', () => {
     console.log('connected to database');
