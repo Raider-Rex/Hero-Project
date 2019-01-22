@@ -50,49 +50,47 @@ export class ListComponent implements OnInit {
       });
   }
   
-  //Method called when a hero is clicked.
-  selectedHero: Hero;
-  onSelect(hero: Hero): void {
-  this.selectedHero = hero;
-}
-
-///// Mutations //////
-
-//This Query Adds a new hero to the database
-addHero(name :string){
-    console.log(name);
-    this.apollo.mutate({
-      //The mutation property takes the mutation that you want to perform 
-      //This mutation accepts a variable of type String! called name ($ denotes its a variable)
-      // addHero(name: $name) passes the variable from above into the addHero mutation declared in the backend/graphql
-      mutation: gql `
-      mutation addHero($name: String!){
-        addHero(name: $name){
-          name
-        }
-      }
-      `,
-      variables: {
-        //Sets the name property of this mutations ($name) = to the one passed in as a parameter
-        name: name
-      },
-    }).subscribe();
-}
-
-//This Query deletes a hero from the database
-deleteHero(id: string) {
-  this.apollo.mutate({
-    mutation: gql`
-    mutation delete($id: String!) {
-      deleteHero(id: $id) {
-        name
-      }
-    }`,
-    variables: {
-      id: id
+    //Method called when a hero is clicked.
+    selectedHero: Hero;
+        onSelect(hero: Hero): void {
+        this.selectedHero = hero;
     }
-  }).subscribe();
-}
 
+    ///// Mutations //////
 
+    //This Query Adds a new hero to the database
+    addHero(name :string){
+        console.log(name);
+        this.apollo.mutate({
+        //The mutation property takes the mutation that you want to perform 
+        //This mutation accepts a variable of type String! called name ($ denotes its a variable)
+        // addHero(name: $name) passes the variable from above into the addHero mutation declared in the backend/graphql
+        mutation: gql `
+        mutation addHero($name: String!){
+            addHero(name: $name){
+                name
+            }
+        }
+        `,
+        variables: {
+            //Sets the name property of this mutations ($name) = to the one passed in as a parameter
+            name: name
+        },
+        }).subscribe();
+    }
+
+    //This Query deletes a hero from the database
+    deleteHero(id: string) {
+    this.apollo.mutate({
+        mutation: gql`
+            mutation delete($id: String!) {
+            deleteHero(id: $id) {
+                name
+            }
+            }`,
+            variables: {
+                id: id
+            }
+        }).subscribe();
+    }
 }
