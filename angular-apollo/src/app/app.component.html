@@ -1,8 +1,10 @@
 <div style="text-align:center">
   <h1>
+    <!-- This grabs the "title" variable from the "app.component.ts" file -->
     {{ title }}!
   </h1>
   <hr>
   <app-list></app-list>
 
+<!-- Any paths that are defined in the "app-routing.module.ts" file will show up here when those pages are called -->
 <router-outlet></router-outlet>

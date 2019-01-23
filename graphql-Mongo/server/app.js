@@ -1,7 +1,6 @@
 /*
 * Setting up the server for the backend.
 */
-
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
@@ -12,6 +11,7 @@ const cors = require('cors');
 const app = express();
 // Creates permission to let the localhost:4200 have access to the resources of the server.
 app.options('localhost:4200', cors());
+
 // Uses mongoose as the intermediary between GraphQL and MongoDb.
 // Creating a connection the the MongoDB using the URL.
 // The "{useNewUrlParser: true}" parameter is included because the current url string parser is depreciated,
