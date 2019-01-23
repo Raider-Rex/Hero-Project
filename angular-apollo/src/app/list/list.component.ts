@@ -29,7 +29,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
 
       /* This query returns all of our heroes in the DB and binds the data to the array declared above.
-         allHeroes - Is the name of the query, a query can be named anything but should make logical sense
+         allHeroes - Is the name of the query, a query can be named anything but should make sense
          heroes - Is the name of the collection in the DB, this must match exactly
          name, id - are attributes of the heroes collection
       */
